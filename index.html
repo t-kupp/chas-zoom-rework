@@ -13,10 +13,8 @@
     ></script>
   </head>
   <body>
-    <!-- Navbar  -->
-    <nav
-      class="navbar bg-base-100 border-base-200 fixed z-50 min-h-11 border-b px-5"
-    >
+    <!-- Navbar mobile  -->
+    <nav class="navbar fixed z-50 min-h-11 bg-base-100 px-5 shadow lg:hidden">
       <a href="" class="navbar-start">
         <img class="h-5" src="./img/zoom-logo.svg" alt="" />
       </a>
@@ -27,13 +25,13 @@
         <a class="link-hover link-neutral font-semibold text-gray-500" href=""
           >Host</a
         >
-        <div class="dropdown dropdown-bottom dropdown-end">
+        <div class="dropdown dropdown-end dropdown-bottom">
           <div tabindex="0" role="button" class="text-primary">
             <i class="fa-solid fa-bars"></i>
           </div>
           <ul
             tabindex="0"
-            class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+            class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
           >
             <li><a href="">Products</a></li>
             <li><a href="">Solutions</a></li>
@@ -43,8 +41,77 @@
         </div>
       </div>
     </nav>
+    <!-- Navbar desktop  -->
+    <nav
+      class="navbar fixed z-50 hidden min-h-11 bg-base-100 px-5 shadow lg:flex"
+    >
+      <div class="navbar-start">
+        <a href="" class=""
+          ><img src="./img/zoom-logo.svg" class="h5" alt=""
+        /></a>
+      </div>
+      <div class="navbar-center justify-start gap-x-10">
+        <div class="dropdown dropdown-hover">
+          <div
+            tabindex="0"
+            role="button"
+            class="font-semibold text-gray-500 hover:text-primary"
+          >
+            Products
+          </div>
+          <ul
+            tabindex="0"
+            class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
+          >
+            <li><a href="">Zoom Workplace</a></li>
+            <li><a href="">Business Service</a></li>
+          </ul>
+        </div>
+        <div class="dropdown dropdown-hover">
+          <div
+            tabindex="0"
+            role="button"
+            class="font-semibold text-gray-500 hover:text-primary"
+          >
+            Solutions
+          </div>
+          <ul
+            tabindex="0"
+            class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
+          >
+            <li><a href="">Education</a></li>
+            <li><a href="">Financial Services</a></li>
+          </ul>
+        </div>
+        <div class="dropdown dropdown-hover">
+          <div
+            tabindex="0"
+            role="button"
+            class="font-semibold text-gray-500 hover:text-primary"
+          >
+            Resources
+          </div>
+          <ul
+            tabindex="0"
+            class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
+          >
+            <li><a href="">Zoom Blog</a></li>
+            <li><a href="">Resource Library</a></li>
+          </ul>
+        </div>
+        <div class="dropdown dropdown-hover">
+          <a href="" class="font-semibold text-gray-500 hover:text-primary">
+            Plans & pricing
+          </a>
+        </div>
+      </div>
+      <div class="navbar-end gap-x-4">
+        <a href="" class="btn">Contact sales</a
+        ><a href="" class="btn btn-primary text-white">Sing Up Free</a>
+      </div>
+    </nav>
     <!-- Hero 1  -->
-    <div class="hero min-h-screen">
+    <div class="hero min-h-95vh">
       <div class="hero-content flex-col lg:flex-row-reverse">
         <div class="ml-4 mt-10 max-w-xl text-center lg:mt-0 lg:text-left">
           <h1 class="text-5xl font-bold">
@@ -57,13 +124,13 @@
           </p>
           <button class="btn btn-primary text-white">Plans & pricing</button>
         </div>
-        <img src="./img/hero-1.png" class="w-full max-w-sm" />
+        <img src="./img/hero-1.png" class="w-full max-w-md lg:max-w-lg" />
       </div>
     </div>
     <!-- Hero 2 -->
-    <div class="hero bg-base-200 min-h-screen">
+    <div class="hero min-h-screen bg-base-200">
       <div class="hero-content flex-col lg:flex-row-reverse">
-        <img src="./img/hero-2.png" class="w-full max-w-sm" />
+        <img src="./img/hero-2.png" class="w-full max-w-md lg:max-w-lg" />
         <div>
           <h1 class="flex flex-wrap text-4xl font-semibold">
             <img class="mr-2" src="./img/zoom-logo.svg" alt="" /> Workplace
@@ -179,21 +246,46 @@
         </div>
       </div>
     </div>
+    <!-- Hero 3  -->
+    <div class="bg-hero-3 hero min-h-80 text-base-100">
+      <div class="hero-content flex-col py-10 lg:flex-row">
+        <img src="./img/hero-3.png" class="w-full max-w-xl" />
+        <div>
+          <h1 class="text-3xl font-bold">
+            The AI-first work platform for human connection
+          </h1>
+          <p class="py-6">
+            Work happy with AI Companion, reimagine teamwork, enhance customer
+            relationships, and enable seamless experiences with a choice of
+            third-party apps and integrations for best-in-class collaboration.
+          </p>
+          <a href="" class="btn btn-primary text-white">
+            Discover the possibilities
+          </a>
+          <p class="py-6 text-sm text-gray-500">
+            *AI Companion is included at no additional cost with the paid
+            services in your Zoom user account and may not be available for all
+            regions and industry verticals. Some features not currently
+            available across all regions or plans and are subject to change
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- Footer  -->
-    <footer class="footer bg-base-300 text-base-content p-10">
+    <footer class="footer bg-base-300 p-10 text-base-content">
       <nav>
         <h6 class="footer-title">About</h6>
-        <a href="" class="link link-hover">Zoom Blog</a>
-        <a href="" class="link link-hover">Our Team</a>
-        <a href="" class="link link-hover">Integrations</a>
-        <a href="" class="link link-hover">Investors</a>
+        <a href="" class="link-hover link">Zoom Blog</a>
+        <a href="" class="link-hover link">Our Team</a>
+        <a href="" class="link-hover link">Integrations</a>
+        <a href="" class="link-hover link">Investors</a>
       </nav>
       <nav>
         <h6 class="footer-title">Download</h6>
-        <a href="" class="link link-hover">Zoom Workplace App</a>
-        <a href="" class="link link-hover">Zoom Rooms App</a>
-        <a href="" class="link link-hover">Android App</a>
-        <a href="" class="link link-hover">iPhone / iPad App</a>
+        <a href="" class="link-hover link">Zoom Workplace App</a>
+        <a href="" class="link-hover link">Zoom Rooms App</a>
+        <a href="" class="link-hover link">Android App</a>
+        <a href="" class="link-hover link">iPhone / iPad App</a>
       </nav>
       <nav>
         <h6 class="footer-title">Social</h6>

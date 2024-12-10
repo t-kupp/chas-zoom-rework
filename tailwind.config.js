@@ -4,7 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Figtree"],
+        sans: ["Figtree", "sans-serif"],
+      },
+      minHeight: {
+        "95vh": "95vh",
+      },
+      backgroundColor: {
+        "hero-3": "#00053D",
       },
     },
   },
